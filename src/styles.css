@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.rotate-y-90 {
+  transform: rotateY(90deg);
+}
+.showcard img,
+.flipped img {
+  transform: rotateY(0deg);
+  transition-delay: 0.2s;
+}
+.showcard .back,
+.flipped .back {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+}
+.hidecard :is(.back, img) {
+  opacity: 0;
+  transition-delay: 1.2s;
+}
